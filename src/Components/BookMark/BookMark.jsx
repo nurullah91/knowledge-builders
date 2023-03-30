@@ -5,7 +5,7 @@ const BookMark = ({readTime}) => {
     return (
         <div>
            <div className='spent-time'>
-            <h3>Spent time on read: {readTime? readTime:0} min</h3>
+            <h3>Spent time on read: {readTime} min</h3>
 
            </div>
            <div className='bookMark-blogs'>

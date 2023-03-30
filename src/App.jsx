@@ -7,8 +7,15 @@ import Blogs from './Components/Blogs/Blogs'
 
 function App() {
 
-const [readTime, setReadTime] = useState(0);
+const handleBookmark = (id, title) =>{
 
+  console.log(id, title)
+}
+
+
+
+  // handle mark as read section  
+const [readTime, setReadTime] = useState(0);
 
 const handleMarkRead = (time) => {
   const previousReadTime = JSON.parse(localStorage.getItem("readTime"))
@@ -37,7 +44,7 @@ else{
       <Header></Header>
       <div className='container'>
 
-        <Blogs readTime={readTime} handleMarkRead={handleMarkRead}></Blogs>
+        <Blogs readTime={readTime} handleBookmark={handleBookmark} handleMarkRead={handleMarkRead}></Blogs>
       </div>
 
     </div>
