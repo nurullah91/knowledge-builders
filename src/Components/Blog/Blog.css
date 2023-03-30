@@ -1,0 +1,39 @@
+
+.blog {
+    border-bottom: 1px solid gray;
+    padding: 15px;
+    margin-top: 15px;
+}
+.blog img{
+    border-radius: 8px;
+    width: 100%;
+}
+
+
+
+.blog-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+
+.author-info h4{
+    margin-bottom: 5px;
+}
+
+
+
+.author-info {
+    display: flex;
+    align-items: center;
+
+}
+
+.author-info img{
+    height: 50px;
+    width: 50Px;
+    border-radius: 100%;
+    margin-right: 10px;
+}
