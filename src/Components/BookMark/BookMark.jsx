@@ -4,7 +4,14 @@ import "./BookMark.css"
 const BookMark = () => {
     return (
         <div>
-            <h2>Hello form BookMark jsx</h2>
+           <div className='spent-time'>
+            <h3>Spent time or read: 0 min</h3>
+
+           </div>
+           <div className='bookMark-blogs'>
+            <h3>Bookmarked Blogs: 0</h3>
+           </div>
+           
         </div>
     );
 };

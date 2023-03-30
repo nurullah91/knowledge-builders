@@ -20,6 +20,7 @@
 
 
 .author-info h4{
+    margin-top: 0;
     margin-bottom: 5px;
 }
 
@@ -30,10 +31,29 @@
     align-items: center;
 
 }
-
+.tags{
+    margin-right: 10px;
+    font-weight: bold;
+    color: gray;
+    
+}
 .author-info img{
     height: 50px;
     width: 50Px;
     border-radius: 100%;
     margin-right: 10px;
+}
+.read-info{
+    
+    font-weight: 600;
+    color: gray;
+    font-size: 20px;
+}
+.bookMarkBtn{
+    border: none;
+    font-size: 20px;
+}
+
+.read-btn{
+    margin-top: 15px;
 }

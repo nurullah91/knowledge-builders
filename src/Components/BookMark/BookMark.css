@@ -1,0 +1,16 @@
+.spent-time{
+    background-color: rgba(93, 35, 219, 0.131);
+    padding: 10px;
+    border-radius: 8px;
+    color: rgb(35, 35, 174);
+    border: 1px solid rgb(48, 48, 240);
+}
+
+
+.bookMark-blogs{
+    background-color: rgb(206, 203, 203);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+   
+}
