@@ -7,13 +7,37 @@ import Blogs from './Components/Blogs/Blogs'
 
 function App() {
 
+const [readTime, setReadTime] = useState(0);
+
+
+const handleMarkRead = (time) => {
+  const previousReadTime = JSON.parse(localStorage.getItem("readTime"))
+if(previousReadTime){
+const totalReadTime = previousReadTime + parseInt(time);
+
+
+setReadTime(totalReadTime);
+localStorage.setItem("readTime", JSON.stringify(totalReadTime));
+
+}
+
+else{
+  setReadTime(time);
+  localStorage.setItem("readTime", time)
+}
+
+
+
+
+}
+
 
   return (
     <div className="App">
       <Header></Header>
       <div className='container'>
 
-        <Blogs></Blogs>
+        <Blogs readTime={readTime} handleMarkRead={handleMarkRead}></Blogs>
       </div>
 
     </div>

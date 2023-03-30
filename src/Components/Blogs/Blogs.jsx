@@ -3,8 +3,9 @@ import Blog from '../Blog/Blog';
 import BookMark from '../BookMark/BookMark';
 import "./Blogs.css"
 
-const Blogs = () => {
+const Blogs = ({handleMarkRead, readTime}) => {
 
+   
     const [blogs, setBlogs] = useState([]);
 
     useEffect(() => {
@@ -17,12 +18,12 @@ const Blogs = () => {
 
            <div>
            {
-                blogs.map(blog => (<Blog key={blog.id} blog={blog}></Blog>))
+                blogs.map(blog => (<Blog handleMarkRead ={handleMarkRead} key={blog.id} blog={blog}></Blog>))
 
             }
            </div>
 
-            <BookMark></BookMark>
+            <BookMark readTime = {readTime}></BookMark>
         </div>
     );
 };

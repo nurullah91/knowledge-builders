@@ -6,8 +6,11 @@ import { faBook, faBookBookmark, faBookmark, faCoffee } from '@fortawesome/free-
 
 
 const Blog = (props) => {
-    const {id, title, author_img, author_name, cover, published_date, read_time} = props.blog
-    console.log(props.blog);
+    const {id, title, author_img, author_name, cover, published_date, read_time,} = props.blog
+const handleMarkRead = props.handleMarkRead;
+    // console.log(handleMarkRead(5));
+
+
     return (
         <div className='blog'>
             <img src={cover} alt="Cover image" />
@@ -30,7 +33,7 @@ const Blog = (props) => {
             <h2>{title}</h2>
 
             <span className='tags'>#beginners</span> <span className='tags'>#programming</span>
-            <div className='read-btn'>
+            <div onClick={ () =>handleMarkRead(read_time)} className='read-btn'>
             <a href="#">Mark as read</a>
             </div>
         </div>
