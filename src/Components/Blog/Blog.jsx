@@ -7,9 +7,7 @@ import { faBook, faBookBookmark, faBookmark, faCoffee } from '@fortawesome/free-
 
 const Blog = (props) => {
     const { id, title, author_img, author_name, cover, published_date, read_time, } = props.blog
-    const handleMarkRead = props.handleMarkRead;
-
-    const handleBookmark = props.handleBookmark;
+    // const handleMarkRead = props.handleMarkRead;
 
 
     return (
@@ -27,7 +25,7 @@ const Blog = (props) => {
 
                 <div className='read-info'>
                     <span>{read_time} min read </span>
-                    <button onClick={() =>handleBookmark(id, title)} className='bookMarkBtn'><FontAwesomeIcon icon={faBookmark} /></button>
+                    <button className='bookMarkBtn'><FontAwesomeIcon icon={faBookmark} /></button>
                 </div>
             </div>
 
