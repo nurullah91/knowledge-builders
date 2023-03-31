@@ -8,8 +8,7 @@ import { faBook, faBookBookmark, faBookmark, faCoffee } from '@fortawesome/free-
 const Blog = (props) => {
     const { id, title, author_img, author_name, cover, published_date, read_time, } = props.blog
     const handleBookmark = props.handleBookmark;
-
-
+    const handleMarkRead =props.handleMarkRead;
     return (
         <div className='blog'>
             <img src={cover} alt="Cover image" />

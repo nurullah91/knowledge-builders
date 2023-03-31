@@ -2,8 +2,7 @@ import React from 'react';
 import "./BookMark.css"
 
 const BookMark = (props) => {
-const bookMarked = props.bookMarked
-    // const handleBookmark = props.handleBookmark;
+const bookMarked = props.bookMarked;
 
     return (
       <div>
@@ -17,7 +16,7 @@ const bookMarked = props.bookMarked
 
             <div>
                 {
-                    bookMarked.map(markedBlog => <h5 className='marked-blog'>{markedBlog.title}</h5>)
+                    bookMarked.map(markedBlog => <h5 key={markedBlog.id} className='marked-blog'>{markedBlog.title}</h5>)
                 }
             </div>
            </div>

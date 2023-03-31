@@ -8,8 +8,10 @@ import 'react-toastify/dist/ReactToastify.css';
 
 
 
-const Blogs = ({readTime, }) => {
+const Blogs = (props) => {
 
+    const readTime = props.readTime
+    const handleMarkRead = props.handleMarkRead
     const [bookMarked, setBookMarked] = useState([])
   
   
@@ -17,14 +19,11 @@ const Blogs = ({readTime, }) => {
     const handleBookmark = (blog) =>{
       
         const exist = bookMarked.find(markedBlog => markedBlog.id === blog.id);
-        console.log(exist)
         if(exist){
             toast("You marked it before!")
         }
         let newBookMark = [...bookMarked, blog];
         setBookMarked(newBookMark);
-       
-        console.log(blog);
     }
 
 
@@ -40,7 +39,7 @@ const Blogs = ({readTime, }) => {
 
             <div>
                 {
-                    blogs.map(blog => (<Blog handleBookmark={handleBookmark} key={blog.id} blog={blog}></Blog>))
+                    blogs.map(blog => (<Blog handleBookmark={handleBookmark} handleMarkRead={handleMarkRead} key={blog.id} blog={blog}></Blog>))
 
                 }
             </div>
