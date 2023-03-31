@@ -6,7 +6,8 @@ const bookMarked = props.bookMarked
     // const handleBookmark = props.handleBookmark;
 
     return (
-        <div>
+      <div>
+          <div className='bookMarked-container'>
            <div className='spent-time'>
             <h3>Spent time on read: {props.readTime} min</h3>
 
@@ -22,6 +23,7 @@ const bookMarked = props.bookMarked
            </div>
            
         </div>
+      </div>
     );
 };
 

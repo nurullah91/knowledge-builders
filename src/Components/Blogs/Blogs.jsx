@@ -3,6 +3,11 @@ import Blog from '../Blog/Blog';
 import BookMark from '../BookMark/BookMark';
 import "./Blogs.css"
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+
+
 const Blogs = ({readTime, }) => {
 
     const [bookMarked, setBookMarked] = useState([])
@@ -10,8 +15,15 @@ const Blogs = ({readTime, }) => {
   
   
     const handleBookmark = (name) =>{
-      let newBookMark = [...bookMarked,name];
-      setBookMarked(newBookMark);
+
+        const exist = bookMarked.find(markedTitle => name === markedTitle)
+        if(exist){
+            toast("You marked it before!")
+        }
+        let newBookMark = [...bookMarked,name];
+        setBookMarked(newBookMark);
+       
+        
     }
 
 
