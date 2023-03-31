@@ -1,0 +1,14 @@
+.faq-container{
+    font-size: 20px;
+}
+
+.faq{
+    background-color: #f5085538;
+    padding: 15px;
+    margin-top: 30px;
+    border-radius: 10px;
+    box-shadow: 6px 8px 8px #aca7a7;
+    border: 2px solid red;
+    
+}
+
