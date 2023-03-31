@@ -14,16 +14,17 @@ const Blogs = ({readTime, }) => {
   
   
   
-    const handleBookmark = (name) =>{
-
-        const exist = bookMarked.find(markedTitle => name === markedTitle)
+    const handleBookmark = (blog) =>{
+      
+        const exist = bookMarked.find(markedBlog => markedBlog.id === blog.id);
+        console.log(exist)
         if(exist){
             toast("You marked it before!")
         }
-        let newBookMark = [...bookMarked,name];
+        let newBookMark = [...bookMarked, blog];
         setBookMarked(newBookMark);
        
-        
+        console.log(blog);
     }
 
 

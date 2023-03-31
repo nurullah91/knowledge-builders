@@ -17,7 +17,7 @@ const bookMarked = props.bookMarked
 
             <div>
                 {
-                    bookMarked.map(title => <h5 className='marked-blog'>{title}</h5>)
+                    bookMarked.map(markedBlog => <h5 className='marked-blog'>{markedBlog.title}</h5>)
                 }
             </div>
            </div>
