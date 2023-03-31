@@ -2,7 +2,7 @@ import React from 'react';
 import "./BookMark.css"
 
 const BookMark = (props) => {
-
+const bookMarked = props.bookMarked
     // const handleBookmark = props.handleBookmark;
 
     return (
@@ -12,7 +12,13 @@ const BookMark = (props) => {
 
            </div>
            <div className='bookMark-blogs'>
-            <h3>Bookmarked Blogs: 0</h3>
+            <h2>Bookmarked Blogs: {bookMarked.length}</h2>
+
+            <div>
+                {
+                    bookMarked.map(title => <h5 className='marked-blog'>{title}</h5>)
+                }
+            </div>
            </div>
            
         </div>

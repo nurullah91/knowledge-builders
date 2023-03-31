@@ -8,14 +8,7 @@ import FAQ from './Components/FAQ/FAQ'
 
 function App() {
 
-  // const [mark, setMark] = useState([])
-  
-  
-  
-  // const handleBookmark = (blog) =>{
-  //   let newBookMark = [...mark,blog];
-  //   setMark(newBookMark);
-  // }
+ 
 
 
   //   const exist = mark.find(blogID => blogID.id === blog.id);
